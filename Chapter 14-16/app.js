@@ -1,6 +1,7 @@
 // ----------- Assignment 14-16 ----------
 // Question 1
 var studentNames = [];
+var studentNames = new Array();
 
 // Question 2
 var familyMembers = ["Bilal", "Komal", "Mubeen", "Hamdan"]
