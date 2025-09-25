@@ -45,6 +45,13 @@ function calculator(num1, num2, operator, result) {
     return result
 }
 var finalResult = calculator();
-document.write("Result: " + finalResult);
+document.write("Result: " + finalResult + "<br>");
 
 // Question 5
+function square(number,output){
+    number = prompt("Enter a Number")
+    output = number * number
+    return output
+}
+var finalOutput = square();
+document.write(finalOutput)
