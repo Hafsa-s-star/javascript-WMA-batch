@@ -111,3 +111,4 @@ var area2 = calculateArea(w, h); // Using variables
 document.write("Area (using variables): " + area2);
 
 // Question 10
+function palindrome(){}
