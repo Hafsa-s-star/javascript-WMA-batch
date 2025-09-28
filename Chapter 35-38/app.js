@@ -169,6 +169,6 @@ function calcArea(r) {
     document.write("The area is " + a + "<br>");
 }
 
-var radius = Number(prompt("Enter radius of circle"));
+var radius = Number(prompt("Enter Radius of circle"));
 calcCircumference(radius);
 calcArea(radius);
