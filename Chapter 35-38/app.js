@@ -1,36 +1,36 @@
-// ------------- Assignment 35-38 -------------
+ // ------------- Assignment 35-38 -------------
+
 // Question 1
 function currentTime() {
-    document.write(new Date() + "<br>")
+    document.write(new Date() + "<br>");
 }
 currentTime();
 
 // Question 2
 function getName(firstName, lastName, fullName) {
-    firstName = prompt("Enter your first name")
-    lastName = prompt("Enter your last name")
-    fullName = firstName + " " + lastName
-    return fullName
+    firstName = prompt("Enter your first name");
+    lastName = prompt("Enter your last name");
+    fullName = firstName + " " + lastName;
+    return fullName;
 }
 var correctName = getName();
-document.write("Welcome " + correctName + "<br>")
+document.write("Welcome " + correctName + "<br>");
 
 // Question 3
 function getSum(num1, num2, num3) {
-    num1 = Number(prompt("Enter number 1"))
-    num2 = Number(prompt("Enter number 2"))
-    num3 = num1 + num2
-
-    return num3
+    num1 = Number(prompt("Enter number 1"));
+    num2 = Number(prompt("Enter number 2"));
+    num3 = num1 + num2;
+    return num3;
 }
 var storedSum = getSum();
-document.write(storedSum + "<br>")
+document.write("Sum: " + storedSum + "<br>");
 
 // Question 4
 function calculator(num1, num2, operator, result) {
-    num1 = Number(prompt("Enter number 1"))
-    num2 = Number(prompt("Enter number 2"))
-    operator = prompt("Enter any operator")
+    num1 = Number(prompt("Enter number 1"));
+    num2 = Number(prompt("Enter number 2"));
+    operator = prompt("Enter any operator (+, -, *, /)");
     if (operator === "+") {
         result = num1 + num2;
     } else if (operator === "-") {
@@ -42,73 +42,69 @@ function calculator(num1, num2, operator, result) {
     } else {
         result = "Invalid operator";
     }
-    return result
+    return result;
 }
 var finalResult = calculator();
 document.write("Result: " + finalResult + "<br>");
 
 // Question 5
 function square(number, output) {
-    number = prompt("Enter a Number")
-    output = number * number
-    return output
+    number = prompt("Enter a number");
+    output = number * number;
+    return output;
 }
 var finalOutput = square();
-document.write(finalOutput)
+document.write("Square: " + finalOutput + "<br>");
 
 // Question 6
 function factorial() {
-    var n = Number(prompt("Enter a Number"))
+    var n = Number(prompt("Enter a number"));
     var result = 1;
     for (var i = 1; i <= n; i++) {
         result *= i;
     }
-    return result
+    return result;
 }
-
 var factorialOutput = factorial();
-document.write(factorialOutput + "<br>")
+document.write("Factorial: " + factorialOutput + "<br>");
 
 // Question 7
 function showCounting(start, end) {
-    var start = Number(prompt("Enter starting number"))
-    var end = Number(prompt("Enter ending number"))
+    start = Number(prompt("Enter starting number"));
+    end = Number(prompt("Enter ending number"));
     if (start > end) {
-        console.log("Start should be less than or equal to end.");
-        return
-    } else if (isNaN(start) || isNaN(end)) {
-        console.log("Please enter valid numbers.");
+        document.write("Start should be less than or equal to end.<br>");
+        return;
     }
-    for (let i = start; i <= end; i++) {
-        document.write(i);
+    for (var i = start; i <= end; i++) {
+        document.write(i + " ");
     }
 }
-var counting = showCounting();
+showCounting();
 
 // Question 8
-function calculateHypotenuse(base, prep) {
+function calculateHypotenuse() {
     function calculateSquare(x) {
-        return x ** 2
+        return x ** 2;
     }
     var base = Number(prompt("Enter the base:"));
-    var prep = Number(prompt("Enter the perpendicular:"));
-    var hypSquare = calculateSquare(base) + calculateSquare(prep)
-    return hypSquare
+    var perp = Number(prompt("Enter the perpendicular:"));
+    var hypSquare = calculateSquare(base) + calculateSquare(perp);
+    return Math.sqrt(hypSquare);
 }
-var hypotenuse = calculateHypotenuse()
-document.write(hypotenuse + "<br>")
+var hypotenuse = calculateHypotenuse();
+document.write("Hypotenuse: " + hypotenuse + "<br>");
 
 // Question 9
 function calculateArea(width, height) {
     return width * height;
 }
 var area1 = calculateArea(5, 10); // Direct values
-document.write("Area (using values): " + area1 + " ");
+document.write("Area (using values): " + area1 + "<br>");
 
-var w = 7;
-var h = 3;
+var w = 7, h = 3;
 var area2 = calculateArea(w, h); // Using variables
-document.write("Area (using variables): " + area2 + " ");
+document.write("Area (using variables): " + area2 + "<br>");
 
 // Question 10
 function isPalindrome() {
@@ -121,7 +117,7 @@ function isPalindrome() {
         return userInput + " is not a palindrome.";
     }
 }
-document.write(isPalindrome());
+document.write(isPalindrome() + "<br>");
 
 // Question 11
 function capitalizeWords() {
@@ -132,9 +128,7 @@ function capitalizeWords() {
     }
     return words.join(" ");
 }
-
-document.write(capitalizeWords());
-
+document.write(capitalizeWords() + "<br>");
 
 // Question 12
 function findLongestWord() {
@@ -148,7 +142,7 @@ function findLongestWord() {
     }
     return longestWord;
 }
-document.write("Longest word: " + findLongestWord());
+document.write("Longest word: " + findLongestWord() + "<br>");
 
 // Question 13
 function countLetter() {
@@ -162,7 +156,7 @@ function countLetter() {
     }
     return "Occurrences of '" + letter + "': " + count;
 }
-document.write(countLetter());
+document.write(countLetter() + "<br>");
 
 // Question 14
 function calcCircumference(r) {
@@ -175,6 +169,6 @@ function calcArea(r) {
     document.write("The area is " + a + "<br>");
 }
 
-var radius = prompt("Enter radius of circle");
+var radius = Number(prompt("Enter radius of circle"));
 calcCircumference(radius);
 calcArea(radius);
