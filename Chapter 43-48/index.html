@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+  <style>
+      img {
+      width: 150px;
+      height: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+
+      table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 30px auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #0078d7;
+      color: white;
+    }
+    button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e60000;
+    }
+
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h2>Click any Mobile Image</h2>
+  <img src="https://m.media-amazon.com/images/I/71V--WZVUIL._SL1500_.jpg" 
+       alt="iPhone" 
+       onclick="showAlert('iPhone 15 Pro Max')">
+
+  <img src="https://m.media-amazon.com/images/I/81CgtwSII3L._SL1500_.jpg" 
+       alt="Samsung" 
+       onclick="showAlert('Samsung Galaxy S24 Ultra')">
+
+  <img src="https://m.media-amazon.com/images/I/71v2jVh6nIL._SL1500_.jpg" 
+       alt="Xiaomi" 
+       onclick="showAlert('Xiaomi Redmi Note 13 Pro')">
+
+  <img src="https://m.media-amazon.com/images/I/71qGismu6NL._SL1500_.jpg" 
+       alt="Oppo" 
+       onclick="showAlert('Oppo Reno 12 Pro')">
+
+ <h2 style="text-align:center;">Student Records</h2>
+
+  <table id="studentTable">
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>Class</th>
+      <th>Action</th>
+    </tr>
+
+    <!-- 10 Student Rows -->
+    <tr>
+      <td>1</td><td>Ali</td><td>10th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>2</td><td>Hafsa</td><td>9th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>3</td><td>Bilal</td><td>10th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>4</td><td>Ayesha</td><td>8th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>5</td><td>Usman</td><td>10th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>6</td><td>Fatima</td><td>9th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>7</td><td>Ahmed</td><td>8th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>8</td><td>Sara</td><td>10th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>9</td><td>Zain</td><td>9th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>10</td><td>Maryam</td><td>8th</td><td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </table>
+
+   <img 
+    id="mobileImg"
+    src="https://m.media-amazon.com/images/I/71V--WZVUIL._SL1500_.jpg"
+    width="200"
+    height="250"
+    onmouseover="changeImage()"
+    onmouseout="resetImage()"
+  >
+
+   <h2>Simple Counter</h2>
+  <h1 id="counterValue">0</h1>
+  <button onclick="increase()">Increase</button>
+  <button onclick="decrease()">Decrease</button>
+  <script>
+    // Question 1
+    Swal.fire({
+      title: "<strong>ALERT <u>link</u> example</strong>",
+      html: `
+        You can use <b>this</b>,
+        <a href="https://www.linkedin.com/in/hafsa-bilal-72a54932b/" autofocus>links</a>,
+        and other HTML tags
+      `,
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      confirmButtonText: `
+        <i class="fa fa-thumbs-up"></i> Great!
+      `,
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+  </script>
+  <script src="./app.js"></script>
+</body>
+</html>
