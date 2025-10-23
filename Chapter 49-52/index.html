@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <!-- Question 1 -->
+    <h2 id="heading">Signup Form</h2>
+
+    <form onsubmit="submitForm(); return false;">
+        First Name: <input type="text" id="fName"><br><br>
+        Last Name: <input type="text" id="lName"><br><br>
+        Email: <input type="email" id="email"><br><br>
+        Password: <input type="password" id="password"><br><br>
+
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        Country:
+        <select id="country">
+            <option value="">Select</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select>
+        <br><br>
+
+        Comments: <br>
+        <textarea id="comments" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Form Data:</h3>
+    <p id="result"></p>
+
+    <!-- Question 2 -->
+    <h2>Article Preview</h2>
+
+    <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </p>
+    <a href="#" id="link" onclick="expandText()">See more</a>
+
+    <!-- Question 3 -->
+    <h2>Student Details</h2>
+
+    <form onsubmit="addStudent(); return false;">
+        Name: <input type="text" id="name">
+        Age: <input type="number" id="age">
+        Grade: <input type="text" id="grade">
+        <input type="submit" value="Add Student">
+    </form>
+
+    <br>
+
+    <table border="1" id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
